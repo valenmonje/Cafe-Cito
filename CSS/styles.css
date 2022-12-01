@@ -1,349 +1,245 @@
-/* Estilos header */
-
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.gridContainer{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 4.5rem auto auto;
+/* Paleta de colores */
+/* Color del main */
+/* Color del header y footer */
+header {
+  background-color: #808080;
+  display: flex;
+  justify-content: space-between;
+}
+header .cafeCito, header nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 40px;
+  margin: 10px 10px;
+}
+header .menuHamburguesa {
+  background-color: #808080;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin: 20px 15px;
+  list-style: none;
+}
+header nav ul li:hover {
+  transform: scale(0.9);
+}
+header nav ul li a {
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+header nav ul li a:hover {
+  background-color: #fff;
+}
+header nav ul li .activo {
+  background-color: #fff;
 }
 
-header{
-    background-color: grey;
+.footer {
+  background-color: #808080;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  /* margin-top: 20px; */
+  bottom: 0%;
+}
+.footer a {
+  font-size: 2rem;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* MediaQ de Productos */
+@media only screen and (max-width: 769px) {
+  .containerProductos {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+    align-items: none;
+  }
+  .containerProductos .cafeCitoCarta {
+    width: 47%;
+    margin: 0;
+  }
 }
-
-header .cafeCito{
-    color: black;
-    text-decoration: none;
-    font-size: 40px;
-    margin: 10px 10px;
+@media only screen and (max-width: 426px) {
+  .containerProductos .cafeCitoCarta {
+    width: 100%;
+  }
 }
-
-.menuHamburguesa{
-    background-color: grey;
+/* MediaQ de Nosotros */
+@media only screen and (max-width: 426px) {
+  .mainNosotros .containerNosotros {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mainNosotros .containerNosotros .p {
+    margin: 20px;
+  }
+  .mainNosotros .containerNosotros .img {
+    width: 50%;
+  }
 }
-
-header nav ul{
-    display: flex;
+/* MediaQ de Galeria */
+@media only screen and (max-width: 769px) {
+  .mainGaleria .contenidoGaleria {
+    justify-content: center;
+  }
 }
-
-header nav ul li{
-    margin: 20px 15px;
-    list-style: none;;
-}
-
-header nav ul li a{
+/* MediaQ de Contactanos */
+@media only screen and (max-width: 769px) {
+  .mainContacto {
     padding: 10px;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 10px;
+  }
 }
-
-header nav ul li a:hover{
-    background-color:#FFF
-     
+@media only screen and (max-width: 426px) {
+  .mainContacto {
+    padding: 10px;
+  }
 }
-
-header nav ul li:hover{
-    transform: scale(0.9);
-}
-
-.activo{
-    background-color: #FFF;
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 4.5rem auto auto;
 }
 
 /* MAIN HOME */
-body{
-    background-color: burlywood;
-}
-.tituloHome{
-    text-align: center;
-    padding: 20px;
+body {
+  background-color: #deb887;
 }
 
-.productoContainer{
-    gap: 20px;
+.container .tituloHome {
+  text-align: center;
+  padding: 20px;
+}
+.container .productoContainer {
+  gap: 20px;
+}
+.container .productoContainer .producto {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.container .productoContainer .producto .imgProducto {
+  height: 400px;
+}
+.container .productoContainer .producto h2 {
+  text-align: center;
 }
 
-.imgProducto{
-    height: 400px;
-}
-
-h2{
-    text-align: center;
-}
-
-.producto{
-    background-color: #FFF;
-    border-radius: 5px;
-    border: 2px solid black;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-/* main{
-    background-color: burlywood;
-    padding: 20px;
-}
-
-main h1{
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.producto{
-    margin-bottom: 50px;
-    background-color: #FFF;
-    width: 40%;
-    border: 2px solid black; 
-    
-}
-
-.producto img{
-        width: 100%;
-        height: 400px;
-}
-
-.boxContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.productoTexto h2{
-    text-align: center;
-}
-
-.productoTexto p{
-    text-align: justify;
-    padding: 15px;
-} */
-
-.footer{
-    background-color: grey;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    margin-top: 20px;
-}
-
-
-.footer a{
-    font-size: 2rem;
-    color: black;
-    cursor: pointer;
-}
 /* MAIN CARTA */
-
-.mainProductos{
-        padding: 20px;
+.mainProductos {
+  padding: 20px;
 }
-
-.mainProductos h1{
-        text-align: center;
+.mainProductos h1 {
+  text-align: center;
 }
-
-.containerProductos{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+.mainProductos .containerProductos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: none;
 }
-
-.cafeCitoCarta{
-        border: 1px solid black;
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 10px;
-        margin-bottom: 50px;
-        text-align: justify;
-        
+.mainProductos .containerProductos .cafeCitoCarta {
+  border: 1px solid #000000;
+  /* width: 30%; */
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 50px;
+  text-align: justify;
 }
-
-.cafeCitoCarta h2{
-        margin-top: 30px;
-        text-align: center;
+.mainProductos .containerProductos .cafeCitoCarta h2 {
+  margin-top: 30px;
+  text-align: center;
 }
-
-.cafeCitoCarta table{
-        color: black;
+.mainProductos .containerProductos .cafeCitoCarta table {
+  color: #000000;
+  width: 100%;
 }
-
-.cafeCitoCarta table td{
-        padding: 10px;
+.mainProductos .containerProductos .cafeCitoCarta table td {
+  padding: 10px;
 }
 
 /* MAIN NOSOTROS */
-
-.mainNosotros{
-    height: 79vh;
-    padding: 20px;
+.mainNosotros {
+  padding: 20px;
 }
-
-.mainNosotros h1{
-    text-align: center;
+.mainNosotros h1 {
+  text-align: center;
 }
-
-.containerNosotros{
-    margin-bottom: 20px;
-    display: flex;    
+.mainNosotros .containerNosotros {
+  margin-bottom: 20px;
+  display: flex;
 }
-
-.containerNosotros img{
-    width: 30%;
+.mainNosotros .containerNosotros img {
+  width: 30%;
 }
-
-.containerNosotros p{
-    text-align: center;
-    margin: auto 20px;
+.mainNosotros .containerNosotros p {
+  text-align: center;
+  margin: auto 20px;
 }
 
 /* MAIN GALERIA */
-
-.contenidoGaleria img{
-    padding: 10px;
-    width: 300px;
-    height: 350px;
-    
+.mainGaleria {
+  display: flex;
+  justify-content: center;
+}
+.mainGaleria .contenidoGaleria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mainGaleria .contenidoGaleria img {
+  padding: 10px;
+  width: 300px;
+  height: 350px;
 }
 
 /* MAIN CONTACTANOS */
-
-.tituloContactanos{
-    text-align: center;
+.mainContacto {
+  padding: 10px;
 }
-.formularioContactanos{
-    padding: 20px;
+.mainContacto .containerFormulario .formularioContactanos {
+  padding: 20px;
 }
-
-.location{
-    margin: 20px;
-    display: flex;
-    justify-content: center;
+.mainContacto .containerFormulario .formularioContactanos .tituloContactanos {
+  text-align: center;
 }
-
-.location svg{
-    text-align: center;
-    margin-right:7px ;
-    width: 15px;
+.mainContacto .containerInformacion h2 {
+  text-align: center;
+  margin: 10px 0px;
 }
-
-.iframeMap{
-    width: 70%;
-    position: relative;
-    left: 15%;
+.mainContacto .containerInformacion .location {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
-
-
-/* .mainContacto{
-    padding: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.mainContacto .containerInformacion .location svg {
+  text-align: center;
+  margin-right: 7px;
+  width: 15px;
 }
-
-.containerFormulario{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.form{
-    margin-bottom: 30px;
-    background-color: rgb(240, 188, 135);
-    padding: 20px;
-    width: 60%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    outline: none;
-    position: relative;
-    left: 20%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 3px;
-}
-
-.form input{
-    border-radius: 5px;
-}
-
-.form textarea{
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 500px;
-}
-
-.inputEnviar{
-    margin-top: 15px;
-    margin-right: 10px;
-    background-color: green;
-    color: #FFF;
-    padding: 10px 15px;
-}
-
-.inputBorrar{
-    margin-top: 15px;
-    margin-left: 10px;
-    background-color: red;
-    color: #FFF;
-    padding: 10px 15px;
-}
-
-.containerInformacion{
-    margin-top: 30px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 3px;
-    width: 60%;
-    position: relative;
-    left: 20%;
-}
-
-.location{
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.location svg{
-    text-align: center;
-    margin-right:7px ;
-    width: 15px;
-}
-
-.iframeMap{
-    width: 70%;
-    position: relative;
-    left: 15%;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.mainContacto .containerInformacion .iframeMap {
+  width: 70%;
+  position: relative;
+  left: 15%;
+}/*# sourceMappingURL=styles.css.map */
